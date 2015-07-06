@@ -1,5 +1,5 @@
 var Thermostat = function() {
-  this.temp = 20; 
+  this.temp = 20;
 };
 
 Thermostat.prototype.currentTemp = function() {
@@ -11,5 +11,7 @@ Thermostat.prototype.increaseTemp = function () {
 };
 
 Thermostat.prototype.decreaseTemp = function () {
-  this.temp -= 1;
+  if (this.temp > 10) {
+    this.temp -= 1;
+  }
 };
