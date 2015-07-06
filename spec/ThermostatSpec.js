@@ -26,24 +26,21 @@ describe('Thermostat', function() {
   describe('has limited range', function() {
 
     it('cannot go below 10', function() {
-      for (count = 20; count > 0; count--){
-        thermostat.down();
-      };
+      thermostat.temperature = 10;
+      thermostat.down();
       expect(thermostat.show()).toEqual(10);
     });
 
     it('cannot go above 25 if the power save mode is on', function() {
-      for (count = 0; count < 100; count++){
-        thermostat.up();
-      };
+      thermostat.temperature = 25;
+      thermostat.up();
       expect(thermostat.show()).toEqual(25);
     });
 
     it('cannot go above 32 if the power save mode is off', function() {
       thermostat.changeMode();
-      for (count = 0; count < 100; count++){
-        thermostat.up();
-      };
+      thermostat.temperature = 32;
+      thermostat.up();
       expect(thermostat.show()).toEqual(32);
     });
 
