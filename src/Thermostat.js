@@ -29,3 +29,7 @@ Thermostat.prototype.decreaseTemp = function() {
 Thermostat.prototype.powersaveToggle = function() {
   this.powerSave = !this.powerSave;
 };
+
+Thermostat.prototype.resetTemp = function() {
+  this.temp = 20;
+};

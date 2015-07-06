@@ -46,4 +46,8 @@ describe('Thermostat', function() {
     expect(thermostat.powerSave).toBe(true);
   });
 
+  it('can be reset to 20', function() {
+    thermostat.resetTemp();
+    expect(thermostat.currentTemp()).toEqual(20);
+  });
 });
