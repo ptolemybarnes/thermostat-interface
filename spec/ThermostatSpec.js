@@ -50,4 +50,24 @@ describe('Thermostat', function() {
     thermostat.resetTemp();
     expect(thermostat.currentTemp()).toEqual(20);
   });
+
+  it('outputs green if temp is below 18', function() {
+    for (var i = 5; i > 0; i--) {
+      thermostat.decreaseTemp();
+    }
+    expect(thermostat.showColor()).toEqual("green");
+  });
+
+  it('outputs yellow if temp is below 25', function() {
+    expect(thermostat.showColor()).toEqual("yellow");
+  });
+
+  it('outputs red if temp is equal to 25 or above', function() {
+    thermostat.powersaveToggle();
+    for (var i = 0; i < 13 ; i++) {
+      thermostat.increaseTemp();
+    }
+    expect(thermostat.showColor()).toEqual("red");
+  });
+
 });
