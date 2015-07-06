@@ -10,5 +10,8 @@ describe('Thermostat', function() {
     expect(thermostat.currentTemp()).toEqual(20);
   });
 
-
+  it('increases the temp with the up botton', function() {
+    thermostat.increaseTemp();
+    expect(thermostat.currentTemp()).toEqual(21);
+  });
 });
