@@ -1,11 +1,15 @@
-var Thermostat = function() {};
-var temp = 20;
+var Thermostat = function() {
+  this.temp = 20; 
+};
 
 Thermostat.prototype.currentTemp = function() {
-  return temp;
+  return this.temp;
 };
 
 Thermostat.prototype.increaseTemp = function () {
-  temp += 1;
-  return temp;
+  this.temp += 1;
+};
+
+Thermostat.prototype.decreaseTemp = function () {
+  this.temp -= 1;
 };
