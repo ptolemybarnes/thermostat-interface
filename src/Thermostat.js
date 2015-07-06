@@ -13,6 +13,11 @@ Thermostat.prototype.increaseTemp = function () {
   	  this.temp ++;
   	}
   }
+  else {
+    if (this.temp < 32) {
+      this.temp ++;
+    }
+  }
 };
 
 Thermostat.prototype.decreaseTemp = function () {
@@ -21,11 +26,6 @@ Thermostat.prototype.decreaseTemp = function () {
   }
 };
 
-// Thermostat.prototype.powersaveToggle = function() {
-//   if (this.powerSave === true) {
-//   	this.powerSave = false;
-//   }
-//   if (this.powerSave === false) {
-//   	this.powerSave = true;
-//   }
-// };
+Thermostat.prototype.powersaveToggle = function() {
+  this.powerSave = !this.powerSave;
+};
