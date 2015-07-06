@@ -7,7 +7,7 @@ Thermostat.prototype.currentTemp = function() {
   return this.temp;
 };
 
-Thermostat.prototype.increaseTemp = function () {
+Thermostat.prototype.increaseTemp = function() {
   if (this.powerSave) {
   	if (this.temp < 25) {
   	  this.temp ++;
@@ -20,7 +20,7 @@ Thermostat.prototype.increaseTemp = function () {
   }
 };
 
-Thermostat.prototype.decreaseTemp = function () {
+Thermostat.prototype.decreaseTemp = function() {
   if (this.temp > 10) {
     this.temp --;
   }
