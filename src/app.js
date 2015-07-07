@@ -6,13 +6,15 @@ function showTemp() {
 }
 
 function upTemp() {
-  var up = document.getElementById('up');
   thermostat.up();
   showTemp();
 }
 
 function downTemp() {
-  var up = document.getElementById('down');
   thermostat.down();
   showTemp();
+}
+
+function powerSaveMode() {
+  thermostat.changeMode();
 }
