@@ -3,7 +3,7 @@
 
 <head>
   <script type="text/javascript" src="src/Thermostat.js"></script>
-
+  <script type="text/javascript" src="src/app.js"></script>
 </head>
 
 <body>
@@ -13,13 +13,17 @@
     <p><div id="temperature" style="float: left"> </div>&#8451;</p>
 
     <p>
-    <input type="submit" value="&uarr;" />
-    <input type="submit" value="&darr;" />
-    Power save mode <input type="checkbox" />
+    <input id="up" type="submit" value="&uarr;" />
+    <input id="down" type="submit" value="&darr;" />
+    Power save mode <input id="powerSaveMode" type="checkbox" />
     </p>
   </div>
 
 </body>
+
+<script>
+  showTemp();
+</script>
 
 
 </html>
