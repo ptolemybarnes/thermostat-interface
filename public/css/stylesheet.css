@@ -3,5 +3,30 @@
   }
 
 body {
-  background-color: grey;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#temperature {
+  margin-left: 90px;
+  margin-right: auto;
+  width: 1.5em
+}
+
+#reset {
+  margin-left: 50px;
+  margin-right: auto;
+  width: 10em;
+}
+
+#up {
+  width:100px;
+  height:100px;
+}
+
+#thermostat {
+  position: fixed;
+  left: 39%;
+  top: 35%;
+  width: 50em;
+  height: 50em;
 }
