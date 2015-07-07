@@ -23,3 +23,9 @@ function resetTemp() {
   thermostat.reset();
   showTemp();
 }
+
+function changeColour() {
+  var temperature = document.getElementById('temperature');
+  if(thermostat.setting() === "low") {}
+  if(thermostat.setting() === "high") {}
+}
