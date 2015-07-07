@@ -1,9 +1,14 @@
 var thermostat = new Thermostat();
 
 function showTemp() {
-  var div = document.getElementById('temperature');
-  div.innerText = thermostat.show();
-  changeColour();
+  var temperature = document.getElementById('temperature');
+  temperature.innerHTML = thermostat.show();
+  function changeColour() {
+    if(thermostat.setting() === "low") { temperature.setAttribute('style', 'color: green;') }
+    if(thermostat.setting() === "medium") { temperature.setAttribute('style', 'color: orange;') }
+    if(thermostat.setting() === "high") { temperature.setAttribute('style', 'color: red;') }
+  }
+  return changeColour();
 }
 
 function upTemp() {
@@ -25,9 +30,4 @@ function resetTemp() {
   showTemp();
 }
 
-function changeColour() {
-  var temperature = document.getElementById('temperature');
-  if(thermostat.setting() === "low") { temperature.setAttribute('style', 'color: green;') }
-  if(thermostat.setting() === "medium") { temperature.setAttribute('style', 'color: orange;') }
-  if(thermostat.setting() === "high") { temperature.setAttribute('style', 'color: red;') }
-}
+showTemp();
