@@ -10,3 +10,9 @@ function upTemp() {
   thermostat.up();
   showTemp();
 }
+
+function downTemp() {
+  var up = document.getElementById('down');
+  thermostat.down();
+  showTemp();
+}
