@@ -1,5 +1,12 @@
+var thermostat = new Thermostat();
+
 function showTemp() {
-  var thermostat = new Thermostat();
-  var div = document.getElementById('temperature')
+  var div = document.getElementById('temperature');
   div.innerText = thermostat.show();
-};
+}
+
+function upTemp() {
+  var up = document.getElementById('up');
+  thermostat.up();
+  showTemp();
+}
