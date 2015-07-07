@@ -1,47 +1,28 @@
 var Thermostat = function() {
-  this.temp = 20;
-  this.powerSave = true;
+
+  this.temperature = 20;
+  this.powerSaveMode = true
 };
 
-Thermostat.prototype.currentTemp = function() {
-  return this.temp;
+Thermostat.prototype.show = function () {
+  return this.temperature
 };
 
-Thermostat.prototype.increaseTemp = function() {
-  if (this.powerSave) {
-  	if (this.temp < 25) {
-  	  this.temp ++;
-  	}
-  }
-  else {
-    if (this.temp < 32) {
-      this.temp ++;
-    }
-  }
+Thermostat.prototype.up = function () {
+  if (this.powerSaveMode && this.temperature < 25) { this.temperature ++ };
+  if (!this.powerSaveMode && this.temperature < 32) { this.temperature ++ };
 };
 
-Thermostat.prototype.decreaseTemp = function() {
-  if (this.temp > 10) {
-    this.temp --;
+Thermostat.prototype.down = function () {
+  if (this.temperature > 10) {
+    this.temperature --
   }
 };
 
-Thermostat.prototype.powersaveToggle = function() {
-  this.powerSave = !this.powerSave;
+Thermostat.prototype.changeMode = function () {
+  this.powerSaveMode = !this.powerSaveMode
 };
 
-Thermostat.prototype.resetTemp = function() {
-  this.temp = 20;
-};
-
-Thermostat.prototype.showColor = function () {
-  if (this.temp < 18) {
-    return "green";
-  }
-  else if (this.temp < 25) {
-    return "yellow";
-  }
-  else {
-    return "red";
-  }
+Thermostat.prototype.reset = function() {
+  this.temperature = 20
 };
