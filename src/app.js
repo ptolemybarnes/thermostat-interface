@@ -18,3 +18,8 @@ function downTemp() {
 function powerSaveMode() {
   thermostat.changeMode();
 }
+
+function resetTemp() {
+  thermostat.reset();
+  showTemp();
+}
