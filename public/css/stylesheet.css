@@ -1,27 +1,43 @@
 #temperature {
-  float: left
+  float: left;
+  text-shadow: 2px 2px #6E655C;
   }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #D4CBC1;
+  color: #6E655C;
+}
+
+#changesTemperature {
+  height: 40px;
+  margin-top: 40px
 }
 
 #temperature {
-  margin-left: 90px;
+  margin-left: 60px;
   margin-right: auto;
   width: 1.5em
 }
 
 #reset {
-  margin-left: 50px;
+  margin-left: 65px;
   margin-right: auto;
   width: 10em;
+  background-color: #6E655C;
+  color: #D4CBC1;
+  border-radius: 25px;
 }
 
-#up {
-  width:100px;
-  height:100px;
+#temp {
+  font-size: 45px;
 }
+
+/*#up {
+  padding: 5em;
+  width: 5em;
+  height: 5em;
+}*/
 
 #thermostat {
   position: fixed;
@@ -29,4 +45,16 @@ body {
   top: 35%;
   width: 50em;
   height: 50em;
+}
+
+#up {
+  border-radius: 25px;
+  font-size: 25px;
+  width: 40px;
+}
+
+#down {
+  border-radius: 25px;
+  font-size: 25px;
+  width: 40px;
 }

@@ -11,17 +11,20 @@
 <body>
 
   <div id="thermostat">
+    <div id="temp">
+      <p><div id="temperature"> </div>&#8451;</p>
+    </div>
 
-    <p><div id="temperature"> </div>&#8451;</p>
-
-    <p>
-    <input id="up" onclick="upTemp()" type="submit" value="&uarr;" />
-    <input id="down" onclick="downTemp()" type="submit" value="&darr;" />
-    Power save mode <input id="powerSaveMode" onchange="powerSaveMode()" type="checkbox" checked/>
+    <p id="changesTemperature">
+      <input id="up" onclick="upTemp()" type="submit" value="&uarr;" />
+      <input id="down" onclick="downTemp()" type="submit" value="&darr;" />
+      Power save mode <input id="powerSaveMode" onchange="powerSaveMode()" type="checkbox" checked/>
     </p>
+
     <p>
       <input id="reset" onclick="resetTemp()" type="submit" value="Reset" />
     </p>
+
   </div>
 
 </body>
