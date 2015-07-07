@@ -15,10 +15,14 @@
       <p><div id="temperature"> </div>&#8451;</p>
     </div>
 
-    <p id="changesTemperature">
-      <input id="up" onclick="upTemp()" type="submit" value="&uarr;" />
-      <input id="down" onclick="downTemp()" type="submit" value="&darr;" />
-      Power save mode <input id="powerSaveMode" onchange="powerSaveMode()" type="checkbox" checked/>
+    <p>
+      <div id="changesTemperature">
+        <input id="up" onclick="upTemp()" type="submit" value="&uarr;" />
+        <input id="down" onclick="downTemp()" type="submit" value="&darr;" />
+      </div>
+      <div id="powerSave">
+        Power save mode <input id="powerSaveMode" onchange="powerSaveMode()" type="checkbox" checked/>
+      </div>
     </p>
 
     <p>
