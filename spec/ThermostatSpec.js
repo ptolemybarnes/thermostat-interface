@@ -44,9 +44,28 @@ describe('Thermostat', function() {
       expect(thermostat.show()).toEqual(32);
     });
 
-    it('can be reset to 20', function() {
-      thermostat.reset();
-      expect(thermostat.show()).toEqual(20);
+    describe('it has display attributes', function() {
+
+      it('can be reset to 20', function() {
+        thermostat.reset();
+        expect(thermostat.show()).toEqual(20);
+      });
+
+      it('has a low setting', function() {
+        thermostat.temperature = 17;
+        expect(thermostat.setting()).toEqual('low')
+      });
+
+      it('has a medium setting', function() {
+        thermostat.temperature = 20;
+        expect(thermostat.setting()).toEqual('medium')
+      });
+
+      it('has a high setting', function() {
+        thermostat.temperature = 26;
+        expect(thermostat.setting()).toEqual('high')
+      });
+
     });
 
   });

@@ -26,3 +26,9 @@ Thermostat.prototype.changeMode = function () {
 Thermostat.prototype.reset = function() {
   this.temperature = 20;
 };
+
+Thermostat.prototype.setting = function() {
+  if (this.temperature < 18){ return 'low'};
+  if (this.temperature >= 18 && this.temperature <= 25 ){ return 'medium'};
+  if (this.temperature > 25){ return 'high'};
+};
