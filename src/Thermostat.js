@@ -1,11 +1,11 @@
 var Thermostat = function() {
 
   this.temperature = 20;
-  this.powerSaveMode = true
+  this.powerSaveMode = true;
 };
 
 Thermostat.prototype.show = function () {
-  return this.temperature
+  return this.temperature;
 };
 
 Thermostat.prototype.up = function () {
@@ -15,14 +15,14 @@ Thermostat.prototype.up = function () {
 
 Thermostat.prototype.down = function () {
   if (this.temperature > 10) {
-    this.temperature --
+    this.temperature -- ;
   }
 };
 
 Thermostat.prototype.changeMode = function () {
-  this.powerSaveMode = !this.powerSaveMode
+  this.powerSaveMode = !this.powerSaveMode;
 };
 
 Thermostat.prototype.reset = function() {
-  this.temperature = 20
+  this.temperature = 20;
 };
