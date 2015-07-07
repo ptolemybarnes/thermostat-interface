@@ -3,17 +3,16 @@ var thermostat = new Thermostat();
 function showTemp() {
   var div = document.getElementById('temperature');
   div.innerText = thermostat.show();
+  changeColour();
 }
 
 function upTemp() {
   thermostat.up();
-  changeColour();
   showTemp();
 }
 
 function downTemp() {
   thermostat.down();
-  changeColour();
   showTemp();
 }
 
@@ -23,7 +22,6 @@ function powerSaveMode() {
 
 function resetTemp() {
   thermostat.reset();
-  changeColour();
   showTemp();
 }
 
