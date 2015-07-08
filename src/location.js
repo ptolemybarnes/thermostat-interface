@@ -11,10 +11,15 @@ function GetLocation(location) {
 function getAddress(latitude, longitude) {
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({'latLng': new google.maps.LatLng(latitude, longitude) }, function(results, status) {
-    $('span#location').html('The current temperature at ' + results[0].address_components[1].long_name);
-    var location = results[0].address_components[3].long_name
-    console.log(results[0].address_components[3].long_name)
-    getTemperature(location);
+    var locationData = results[0].address_components;
+    for (var i = 0; i < locationData.length; i++ ){
+        if (locationData[i].types[0] == "route") { var address = locationData[i].long_name};
+        if (locationData[i].types[0] == "postal_town") { var town = locationData[i].long_name};
+      };
+      console.log(address);
+      console.log(town);
+    $('span#location').html('The current temperature at ' + address);
+    getTemperature(town);
   });
 }
 
