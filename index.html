@@ -14,28 +14,38 @@
 <body>
 
   <div id="thermostat">
-    <div id="temp">
-      <p><div id="temperature"> </div>&#8451;</p>
+    <div class="thermostat">
+      <div id="temp">
+        <p><div id="temperature"> </div>&#8451;</p>
+      </div>
+
+      <p>
+        <div id="changes_temperature">
+          <input type="submit" value="&uarr;" />
+          <input type="submit" value="&darr;" />
+        </div>
+        <div id="power_save">
+          Power save mode <input id="power_save_mode" type="checkbox" checked/>
+        </div>
+      </p>
+
+      <p>
+        <input id="reset" type="submit" value="Reset" />
+      </p>
+
+        <div id="current_temperature"><span id="location"></span><span id="weather"></span>
+
+      </div>
     </div>
 
-    <p>
-      <div id="changes_temperature">
-        <input id="up" type="submit" value="&uarr;" />
-        <input id="down" type="submit" value="&darr;" />
-      </div>
-      <div id="power_save">
-        Power save mode <input id="power_save_mode" type="checkbox" checked/>
-      </div>
-    </p>
-
-    <p>
-      <input id="reset" type="submit" value="Reset" />
-    </p>
-
-      <div id="current_temperature"><span id="location"></span><span id="weather"></span>
-
+    <div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" />
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
     </div>
-
+    
   </div>
 
 </body>

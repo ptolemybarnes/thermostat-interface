@@ -26,6 +26,10 @@ $('#reset').click(function resetTemp() {
   showTemp();
 });
 
+$('#myonoffswitch').change(function() {
+  $('div.thermostat').visibilityToggle();
+});
+
 var changeColour = function() {
   var temperature = $('#temperature');
   if(thermostat.setting() === "low") { temperature.css({'color': 'green'}) }
@@ -40,3 +44,17 @@ var shakeThatThang = function() {
 };
 
 showTemp();
+
+jQuery.fn.visible = function() {
+    return this.css('visibility', 'visible');
+};
+
+jQuery.fn.invisible = function() {
+    return this.css('visibility', 'hidden');
+};
+
+jQuery.fn.visibilityToggle = function() {
+    return this.css('visibility', function(i, visibility) {
+        return (visibility == 'visible') ? 'hidden' : 'visible';
+    });
+};
