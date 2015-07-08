@@ -46,7 +46,5 @@ function weather(){
     });
 };
 
-
-
 showTemp();
 weather();

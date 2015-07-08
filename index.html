@@ -6,6 +6,7 @@
   <script type="text/javascript" src="src/Thermostat.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   <link rel="stylesheet" href="./public/css/stylesheet.css">
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
@@ -31,7 +32,10 @@
       <input id="reset" type="submit" value="Reset" />
     </p>
 
-    <div id="weather">
+
+      <span id="location">
+      </span>
+      <div id="weather">
     </div>
 
   </div>
@@ -39,5 +43,5 @@
 </body>
 
 <script type="text/javascript" src="src/app.js" ></script>
-
+<script type="text/javascript" src="src/location.js" ></script>
 </html>
