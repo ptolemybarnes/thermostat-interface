@@ -11,23 +11,23 @@ function showTemp() {
   return changeColour();
 }
 
-function upTemp() {
+document.getElementById('up').onclick = function upTemp() {
   thermostat.up();
   showTemp();
-}
+};
 
-function downTemp() {
+document.getElementById('down').onclick = function downTemp() {
   thermostat.down();
   showTemp();
-}
+};
 
-function powerSaveMode() {
+document.getElementById('powerSave').onchange = function powerSaveMode() {
   thermostat.changeMode();
-}
+};
 
-function resetTemp() {
+document.getElementById('reset').onclick = function resetTemp() {
   thermostat.reset();
   showTemp();
-}
+};
 
 showTemp();
