@@ -1,8 +1,8 @@
 var thermostat = new Thermostat();
 
 function showTemp() {
-  var temperature = document.getElementById('temperature');
-  temperature.innerHTML = thermostat.show();
+  var temperature = $('#temperature');
+  temperature.html(thermostat.show());
   changeColour();
 }
 
@@ -25,14 +25,11 @@ $('#reset').click(function resetTemp() {
   showTemp();
 });
 
-// function color(setcolor) {
-// $('#temperature').css({'color': 'green'});
-
-function changeColour() {
-  var temp = $('#temperature')
-  if(thermostat.setting() === "low") { return temp.css({'color': 'green'}) }
-  if(thermostat.setting() === "medium") { return temp.css({'color': 'orange'}) }
-  if(thermostat.setting() === "high") { return temp.css({'color': 'red'}) }
+var changeColour = function() {
+  var temperature = $('#temperature');
+  if(thermostat.setting() === "low") { temperature.css({'color': 'green'}) }
+  if(thermostat.setting() === "medium") { temperature.css({'color': 'orange'}) }
+  if(thermostat.setting() === "high") { temperature.css({'color': 'red'}) }
 };
 
 showTemp();
