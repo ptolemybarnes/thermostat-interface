@@ -25,10 +25,14 @@ $('#reset').click(function resetTemp() {
   showTemp();
 });
 
+// function color(setcolor) {
+// $('#temperature').css({'color': 'green'});
+
 function changeColour() {
-  if(thermostat.setting() === "low") { return temperature.setAttribute('style', 'color: green;') }
-  if(thermostat.setting() === "medium") { return temperature.setAttribute('style', 'color: orange;') }
-  if(thermostat.setting() === "high") { return temperature.setAttribute('style', 'color: red;') }
-}
+  var temp = $('#temperature')
+  if(thermostat.setting() === "low") { return temp.css({'color': 'green'}) }
+  if(thermostat.setting() === "medium") { return temp.css({'color': 'orange'}) }
+  if(thermostat.setting() === "high") { return temp.css({'color': 'red'}) }
+};
 
 showTemp();
