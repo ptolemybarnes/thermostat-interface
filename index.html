@@ -12,32 +12,32 @@
 </head>
 
 <body>
-  <div id="container">
-    <div id="thermostat">
-      <div id="temp">
-        <p><div id="temperature"> </div>&#8451;</p>
+
+  <div id="thermostat">
+    <div id="temp">
+      <p><div id="temperature"> </div>&#8451;</p>
+    </div>
+
+    <p>
+      <div id="changes_temperature">
+        <input id="up" type="submit" value="&uarr;" />
+        <input id="down" type="submit" value="&darr;" />
       </div>
-
-      <p>
-        <div id="changes_temperature">
-          <input id="up" type="submit" value="&uarr;" />
-          <input id="down" type="submit" value="&darr;" />
-        </div>
-        <div id="power_save">
-          Power save mode <input id="power_save_mode" type="checkbox" checked/>
-        </div>
-      </p>
-
-      <p>
-        <input id="reset" type="submit" value="Reset" />
-      </p>
-
-        <div id="current_temperature"><span id="location"></span><span id="weather"></span>
-
+      <div id="power_save">
+        Power save mode <input id="power_save_mode" type="checkbox" checked/>
       </div>
+    </p>
+
+    <p>
+      <input id="reset" type="submit" value="Reset" />
+    </p>
+
+      <div id="current_temperature"><span id="location"></span><span id="weather"></span>
 
     </div>
+
   </div>
+
 </body>
 
 <script type="text/javascript" src="src/app.js" ></script>
