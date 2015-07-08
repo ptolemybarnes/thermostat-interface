@@ -14,8 +14,8 @@ function getAddress(latitude, longitude) {
   geocoder.geocode({'latLng': new google.maps.LatLng(latitude, longitude) }, function(results, status) {
     var locationData = results[0].address_components;
     for (var i = 0; i < locationData.length; i++ ){
-        if (locationData[i].types[0] == "route") { var address = locationData[i].long_name};
-        if (locationData[i].types[0] == "postal_town") { var town = locationData[i].long_name};
+        if (locationData[i].types[0] === "route") { var address = locationData[i].long_name};
+        if (locationData[i].types[0] === "postal_town") { var town = locationData[i].long_name};
       };
       console.log(address);
       console.log(town);
