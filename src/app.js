@@ -11,10 +11,16 @@ function showTemp() {
   return changeColour();
 }
 
-document.getElementById('up').onclick = function upTemp() {
+$('#up').click('click', function upTemp() {
   thermostat.up();
   showTemp();
-};
+});
+
+
+// document.getElementById('up').onclick = function upTemp() {
+//   thermostat.up();
+//   showTemp();
+// };
 
 document.getElementById('down').onclick = function downTemp() {
   thermostat.down();
