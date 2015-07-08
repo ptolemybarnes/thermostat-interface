@@ -39,6 +39,14 @@ var shakeThatThang = function() {
   if(thermostat.temperature > 29) { temperature.effect("shake",{'direction':'up'}) };
 };
 
+function weather(){
+  var request = 'http://api.openweathermap.org/data/2.5/weather?q=London';
+  $.getJSON(request, function(data) {
+    $('#weather').html(Math.round(data.main.temp - 273.15));
+    });
+};
+
 
 
 showTemp();
+weather();
