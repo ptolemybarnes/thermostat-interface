@@ -3,12 +3,7 @@ var thermostat = new Thermostat();
 function showTemp() {
   var temperature = document.getElementById('temperature');
   temperature.innerHTML = thermostat.show();
-  function changeColour() {
-    if(thermostat.setting() === "low") { temperature.setAttribute('style', 'color: green;') }
-    if(thermostat.setting() === "medium") { temperature.setAttribute('style', 'color: orange;') }
-    if(thermostat.setting() === "high") { temperature.setAttribute('style', 'color: red;') }
-  }
-  return changeColour();
+  changeColour();
 }
 
 $('#up').click(function upTemp() {
@@ -25,9 +20,15 @@ $('#powerSave').change(function powerSaveMode() {
   thermostat.changeMode();
 });
 
-document.getElementById('reset').onclick = function resetTemp() {
+$('#reset').click(function resetTemp() {
   thermostat.reset();
   showTemp();
-};
+});
+
+function changeColour() {
+  if(thermostat.setting() === "low") { return temperature.setAttribute('style', 'color: green;') }
+  if(thermostat.setting() === "medium") { return temperature.setAttribute('style', 'color: orange;') }
+  if(thermostat.setting() === "high") { return temperature.setAttribute('style', 'color: red;') }
+}
 
 showTemp();
