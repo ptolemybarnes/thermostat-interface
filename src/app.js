@@ -7,21 +7,21 @@ function showTemp() {
   shakeThatThang();
 }
 
-$('#up').click(function upTemp() {
+$('#up').click(function() {
   thermostat.up();
   showTemp();
 });
 
-$('#down').click(function downTemp() {
+$('#down').click(function() {
   thermostat.down();
   showTemp();
 });
 
-$('#power_save').change(function powerSaveMode() {
+$('#power_save').change(function() {
   thermostat.changeMode();
 });
 
-$('#reset').click(function resetTemp() {
+$('#reset').click(function() {
   thermostat.reset();
   showTemp();
 });
