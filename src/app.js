@@ -21,9 +21,9 @@ $('#down').click(function downTemp() {
   showTemp();
 });
 
-document.getElementById('powerSave').onchange = function powerSaveMode() {
+$('#powerSave').change(function powerSaveMode() {
   thermostat.changeMode();
-};
+});
 
 document.getElementById('reset').onclick = function resetTemp() {
   thermostat.reset();
