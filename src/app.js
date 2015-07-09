@@ -17,7 +17,7 @@ $('#down').click(function() {
   showTemp();
 });
 
-$('#power_save').change(function() {
+$('label[for=power_save_mode').click(function() {
   thermostat.changeMode();
 });
 

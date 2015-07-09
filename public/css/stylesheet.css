@@ -42,18 +42,62 @@
   font-size: 45px;
 }
 
-#power_save {
+div.power_save {
   font-size: 23px;
-  margin-left: 185px;
+  border-radius: 100%;
+
+  width: 30px;
+	height: 30px;
+	background: #ddd;
+	margin: 10px 375px;
+
+  position: relative;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.power_save label {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 100px;
+
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 1;
+
+	background: #6E655C;
+
+	-webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.power_save input[type=checkbox]:checked + label {
+	background: #26ca28;
 }
 
 #power_save_mode {
-  font-size: 25px;
-  margin-top: 30px;
+  font-size: 30px;
 }
 
 #power_save_mode:checked {
   background-color: #6E655C;
+}
+
+span#power {
+  position: absolute;
+  margin-left: 180px;
+  margin-top: 13px;
+  font-size: 20px;
 }
 
 input[type=submit] {
