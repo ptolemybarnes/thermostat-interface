@@ -39,6 +39,8 @@
 
 #temp {
   font-size: 45px;
+  height: 80px;
+  margin-left: 10px;
 }
 
 div.power_save {

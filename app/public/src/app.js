@@ -63,6 +63,7 @@ ThermostatInterface.prototype.changeColour = function() {
 };
 
 ThermostatInterface.prototype.shakeThatThang = function() {
-  if(this.thermostat.temperature < 15) { temperature.effect("shake") };
-  if(this.thermostat.temperature > 29) { temperature.effect("shake",{'direction':'up'}) };
+  var temp = $('#temp');
+  if(this.thermostat.temperature < 15) { temp.effect("shake") };
+  if(this.thermostat.temperature > 29) { temp.effect("shake",{'direction':'up'}) };
 };
