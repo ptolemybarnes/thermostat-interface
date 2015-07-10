@@ -9,6 +9,13 @@ A thermostat console (but not an actual thermostat) whose display can be turned 
 * JQuery application
 * APIs: OpenWeatherMap and Google Maps
 
-## View it at
+
+## [v1.0](https://github.com/DataMinerUK/thermostat/releases/tag/v1.0)
+
+This is a static page and so does not have persistence enabled. View it at:
 
 [datamineruk.github.io/thermostat](http://datamineruk.github.io/thermostat)
+
+## [v2.0](https://github.com/DataMinerUK/thermostat/releases/tag/v2.0)
+
+Uses a Sinatra web server to save the temperature in a session cookie, thus allowing persistence. Set the session expire after 30 days.
