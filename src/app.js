@@ -15,7 +15,7 @@ function showTemp() {
 $('#up').click(function() {
   thermostat.up();
   showTemp();
-  $.post('/', { temperature: thermostat.show() });
+  $.post('/', { temperature: thermostat.show() }, function() {console.log('Sending a post request')});
 });
 
 $('#down').click(function() {
