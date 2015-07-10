@@ -1,4 +1,4 @@
-var temperature = $('#temperature');
+var temperatureOnSite = $('#temperature_on_site');
 var thermostatInterface = new ThermostatInterface();
 
 $(document).ready(function() {
@@ -47,19 +47,19 @@ function ThermostatInterface() {
 };
 
 ThermostatInterface.prototype.setTemperature = function() {
-  this.thermostat.temperature = temperature.text();
+  this.thermostat.temperature = temperatureOnSite.text();
 };
 
 ThermostatInterface.prototype.showTemp = function() {
-  temperature.html(this.thermostat.show());
+  temperatureOnSite.html(this.thermostat.show());
   this.changeColour();
   this.shakeThatThang();
 };
 
 ThermostatInterface.prototype.changeColour = function() {
-  if(this.thermostat.setting() === "low") { temperature.css({'color': 'green'}) }
-  if(this.thermostat.setting() === "medium") { temperature.css({'color': 'orange'}) }
-  if(this.thermostat.setting() === "high") { temperature.css({'color': 'red'}) }
+  if(this.thermostat.setting() === "low") { temperatureOnSite.css({'color': 'green'}) }
+  if(this.thermostat.setting() === "medium") { temperatureOnSite.css({'color': 'orange'}) }
+  if(this.thermostat.setting() === "high") { temperatureOnSite.css({'color': 'red'}) }
 };
 
 ThermostatInterface.prototype.shakeThatThang = function() {
