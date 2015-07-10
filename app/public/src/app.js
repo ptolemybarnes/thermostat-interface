@@ -2,7 +2,7 @@ var temperature = $('#temperature');
 var thermostatInterface = new ThermostatInterface();
 
 $(document).ready(function() {
-  thermostatInterface.thermostat.temperature = temperature.text();
+  thermostatInterface.setTemperature();
   thermostatInterface.changeColour();
 
   $('#up').click(function() {
@@ -46,11 +46,15 @@ function ThermostatInterface() {
   this.thermostat = new Thermostat();
 };
 
+ThermostatInterface.prototype.setTemperature = function() {
+  this.thermostat.temperature = temperature.text();
+};
+
 ThermostatInterface.prototype.showTemp = function() {
   temperature.html(this.thermostat.show());
   this.changeColour();
   this.shakeThatThang();
-}
+};
 
 ThermostatInterface.prototype.changeColour = function() {
   if(this.thermostat.setting() === "low") { temperature.css({'color': 'green'}) }
