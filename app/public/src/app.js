@@ -1,51 +1,54 @@
 var thermostat = new Thermostat();
-thermostat.temperature = $('#temperature').text();
+var temperature = $('#temperature');
 
 $(document).ready(function() {
+  thermostat.temperature = $('#temperature').text();
   changeColour();
+
+  $('#up').click(function() {
+    thermostat.up();
+    showTemp();
+    postTemperatureToServer();
+  });
+
+  $('#down').click(function() {
+    thermostat.down();
+    showTemp();
+    postTemperatureToServer();
+  });
+
+  $('label[for=power_save_mode').click(function() {
+    thermostat.changeMode();
+  });
+
+  $('#reset').click(function() {
+    thermostat.reset();
+    showTemp();
+  });
+
+  $('#myonoffswitch').change(function() {
+    $('div.thermostat').visibilityToggle();
+  });
+
 });
 
 function showTemp() {
-  var temperature = $('#temperature');
   temperature.html(thermostat.show());
   changeColour();
   shakeThatThang();
 }
 
-$('#up').click(function() {
-  thermostat.up();
-  showTemp();
+var postTemperatureToServer = function() {
   $.post('/', { temperature: thermostat.show() });
-});
-
-$('#down').click(function() {
-  thermostat.down();
-  showTemp();
-  $.post('/', { temperature: thermostat.show() });
-});
-
-$('label[for=power_save_mode').click(function() {
-  thermostat.changeMode();
-});
-
-$('#reset').click(function() {
-  thermostat.reset();
-  showTemp();
-});
-
-$('#myonoffswitch').change(function() {
-  $('div.thermostat').visibilityToggle();
-});
+};
 
 var changeColour = function() {
-  var temperature = $('#temperature');
   if(thermostat.setting() === "low") { temperature.css({'color': 'green'}) }
   if(thermostat.setting() === "medium") { temperature.css({'color': 'orange'}) }
   if(thermostat.setting() === "high") { temperature.css({'color': 'red'}) }
 };
 
 var shakeThatThang = function() {
-  var temperature = $('#temperature');
   if(thermostat.temperature < 15) { temperature.effect("shake") };
   if(thermostat.temperature > 29) { temperature.effect("shake",{'direction':'up'}) };
 };
