@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="src/Thermostat.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <div id="thermostat">
+    <div class="thermostat">
+      <div id="temp">
+        <p><div id="temperature"> </div>&#8451;</p>
+      </div>
+
+      <p>
+        <div id="changes_temperature">
+          <input id="up" type="submit" value="&uarr;" />
+          <input id="down" type="submit" value="&darr;" />
+        </div>
+      <span id="power">Power save mode</span> <div class="power_save">
+          <input id="power_save_mode" type="checkbox" checked hidden="true"/>
+          <label for="power_save_mode"></label>
+        </div>
+      </p>
+
+      <p>
+        <input id="reset" type="submit" value="Reset" />
+      </p>
+
+        <div id="current_temperature"><span id="location"></span><span id="weather"></span>
+
+      </div>
+    </div>
+
+    <div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" />
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+    </div>
+
+  </div>
+
+</body>
+
+<script type="text/javascript" src="src/app.js" ></script>
+<script type="text/javascript" src="src/location.js" ></script>
+</html>
