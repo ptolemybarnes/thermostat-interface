@@ -18,4 +18,4 @@ This is a static page and so does not have persistence enabled. View it at:
 
 ## [v2.0](https://github.com/DataMinerUK/thermostat/releases/tag/v2.0)
 
-Uses a Sinatra web server to save the temperature in a session cookie, thus allowing persistence. Set the session expire after 30 days.
+Uses a Sinatra web server to save the temperature in a session cookie, thus allowing persistence. The session is set to expire after 30 days.
