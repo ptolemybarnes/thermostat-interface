@@ -1,7 +1,6 @@
 require 'sinatra/base'
 
 class Thermostat < Sinatra::Base
-
   use Rack::Session::Cookie, :key => 'rack.session', :expire_after => 2592000 # In seconds
 
   set :views, proc {File.join(root,'.', 'views')}
